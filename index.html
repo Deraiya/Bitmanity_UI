@@ -1,91 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Bitmanity</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bitmanity</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Plugins/bootstrap/bootstrap-grid.css">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="Plugins/searchbox/style.css">
     <style>
         .menu {
-            position:absolute;
-            width:100%;
+            position: absolute;
+            width: 100%;
         }
+
         .fixed {
-            position:fixed;
-            top:0;
+            position: fixed;
+            top: 0;
+            box-shadow:;
         }
     </style>
-
+    <script type="text/javascript">
+        document.querySelector('.searchbox [type="reset"]').addEventListener('click', function () {
+            this.parentNode.querySelector('input').focus();
+        });
+    </script>
 
 
 </head>
 <body>
- <!--<nav class="" role="navigation" style="background-color: #fafafa;line-height: 75px;height: 75px;border-bottom-color: #ebebeb">-->
- <nav class="" role="navigation" style="background-color: #fff;border-bottom-color: #fff">
-    <div class="nav-wrapper container">
-      <a href="#!" class="brand-logo black-text"><img class="responsive-img" id="logo" src="img/logo.png" style="height: 45px;padding-top: 14px"/></a>
-      <ul class="right hide-on-med-and-down" style="display: flex;align-items: baseline;">
-          <li><img src="img/dev/yuna.jpg" alt="" class="circle responsive-img" style="max-width: 25px;height: 25px;"></li>
-        <li><a href="mobile.html"><i class="material-icons black-text">more_vert</i></a></li>
-      </ul>
+<!--First NavBar-->
+<div class="container">
+    <nav class="" role="navigation" style="background-color: #fff;border-bottom-color: #fff">
+        <div class="nav-wrapper" style="display: flex;justify-content: space-between;align-content: center">
+            <div>
+                <a href="#!" class="brand-logo black-text"><img class="responsive-img" id="logo" src="img/logo.png" style="height: 45px;padding-top: 14px"/></a>
+            </div>
+            <div class="hide-on-med-and-down">
+                <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+                    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-13" viewBox="0 0 40 40">
+                        <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"
+                              fill-rule="evenodd"/>
+                    </symbol>
+                    <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-2" viewBox="0 0 20 20">
+                        <path d="M8.96 10L.52 1.562 0 1.042 1.04 0l.522.52L10 8.96 18.438.52l.52-.52L20 1.04l-.52.522L11.04 10l8.44 8.438.52.52L18.96 20l-.522-.52L10 11.04l-8.438 8.44-.52.52L0 18.96l.52-.522L8.96 10z"
+                              fill-rule="evenodd"/>
+                    </symbol>
+                </svg>
+
+                <form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-medium">
+                    <div role="search" class="sbx-medium__wrapper">
+                        <input type="search" name="search" placeholder="Search" autocomplete="off"
+                               required="required" class="sbx-medium__input" style="margin-bottom: 0px;color: black">
+                        <button type="submit" title="Submit your search query." class="sbx-medium__submit">
+                            <svg role="img" aria-label="Search">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-search-13"></use>
+                            </svg>
+                        </button>
+                        <button type="reset" title="Clear the search query." class="sbx-medium__reset"
+                                style="left: 230px;top: 22px;">
+                            <svg role="img" aria-label="Reset">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sbx-icon-clear-2"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="hide-on-med-and-down">
+                <img src="img/dev/yuna.jpg" alt="" class="circle responsive-img"
+                     style="max-width: 30px;height: 30px;margin-top: 12px;">
+            </div>
+
+        </div>
+    </nav>
+</div>
+<!--Second NavBar-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col l12">
+            <div class="menu ">
+                <div style="display: flex;justify-content: center">
+                    <div style="width: 380px">
+                        <div style="display: flex;justify-content: space-around">
+                            <a class="btn-floating btn-large white" style="box-shadow: none"><i
+                                    class="large material-icons " style="color: #cc0000">home</i></a>
+                            <a class="btn-floating btn-large white hide-on-large-only" style="box-shadow: none"><i
+                                    class="large material-icons white" style="color: #000">search</i></a>
+                            <a class="btn-floating btn-large white" style="box-shadow: none"><i
+                                    class="large material-icons white" style="color: #000">whatshot</i></a>
+                            <a class="btn-floating btn-large white" style="box-shadow: none"><i
+                                    class="large material-icons white" style="color: #000">favorite</i></a>
+                            <a class="btn-floating btn-large white" style="box-shadow: none"><i
+                                    class="large material-icons white" style="color: #000">folder</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-  </nav>
+</div>
+<!--Main Content-->
+<div class="container" style="margin-top: 100px">
+    <div class="row">
+        <div class="col m-b-none">
+            <a class="btn-flat" style="border-bottom: 2px solid black">Button</a>
+            <hr style="margin-top: 0px;border-top-width: 0px;">
 
- <div>
-     <div class="menu">
-         <div style="display: flex;justify-content: center">
-             <div style="width: 380px">
-                 <div style="display: flex;justify-content: space-around">
-                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons " style="color: #cc0000">home</i></a>
-                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons" style="color: #000">search</i></a>
-                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">whatshot</i></a>
-                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">favorite</i></a>
-                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">folder</i></a>
-                 </div>
-             </div>
+        </div>
+    </div>
+</div>
 
 
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
-         </div>
-         </div>
-     </div>
- </div>
+<script>
+    var num = 60; //number of pixels before modifying styles
 
- <div style="padding-top: 1000px">
-     &nbsp;
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolorem error esse nesciunt quaerat? Consequatur fugiat provident quae totam! Delectus error illum in minima placeat quibusdam similique suscipit ut vero.
- </div>
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > num) {
+            $('.menu').addClass('fixed');
+        } else {
+            $('.menu').removeClass('fixed');
+        }
+    });
+</script>
 
-
- 
-
-
-
-
-
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
- <script>
-     var num = 60; //number of pixels before modifying styles
-
-     $(window).bind('scroll', function () {
-         if ($(window).scrollTop() > num) {
-             $('.menu').addClass('fixed');
-         } else {
-             $('.menu').removeClass('fixed');
-         }
-     });
- </script>
-
-  </body>
+</body>
 </html>
