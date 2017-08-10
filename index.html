@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bitmanity</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <style>
+        .menu {
+            position:absolute;
+            width:100%;
+        }
+        .fixed {
+            position:fixed;
+            top:0;
+        }
+    </style>
+
+
+
+</head>
+<body>
+ <!--<nav class="" role="navigation" style="background-color: #fafafa;line-height: 75px;height: 75px;border-bottom-color: #ebebeb">-->
+ <nav class="" role="navigation" style="background-color: #fff;border-bottom-color: #fff">
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo black-text"><img class="responsive-img" id="logo" src="img/logo.png" style="height: 45px;padding-top: 14px"/></a>
+      <ul class="right hide-on-med-and-down" style="display: flex;align-items: baseline;">
+          <li><img src="img/dev/yuna.jpg" alt="" class="circle responsive-img" style="max-width: 25px;height: 25px;"></li>
+        <li><a href="mobile.html"><i class="material-icons black-text">more_vert</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <div>
+     <div class="menu">
+         <div style="display: flex;justify-content: center">
+             <div style="width: 380px">
+                 <div style="display: flex;justify-content: space-around">
+                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons " style="color: #cc0000">home</i></a>
+                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons" style="color: #000">search</i></a>
+                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">whatshot</i></a>
+                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">favorite</i></a>
+                     <a class="btn-floating btn-large white" style="box-shadow: none"><i class="large material-icons white" style="color: #000">folder</i></a>
+                 </div>
+             </div>
+
+
+
+         </div>
+         </div>
+     </div>
+ </div>
+
+ <div style="padding-top: 1000px">
+     &nbsp;
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolorem error esse nesciunt quaerat? Consequatur fugiat provident quae totam! Delectus error illum in minima placeat quibusdam similique suscipit ut vero.
+ </div>
+
+
+ 
+
+
+
+
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+ <script>
+     var num = 60; //number of pixels before modifying styles
+
+     $(window).bind('scroll', function () {
+         if ($(window).scrollTop() > num) {
+             $('.menu').addClass('fixed');
+         } else {
+             $('.menu').removeClass('fixed');
+         }
+     });
+ </script>
+
+  </body>
+</html>
